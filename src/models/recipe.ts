@@ -6,8 +6,6 @@ const recipeSchema = new mongoose.Schema({
   instructions: String,
   ingredients: Array,
   shared: Boolean,
-  optional: Boolean,
-  additionalInfo: String,
   userId: String,
 });
 

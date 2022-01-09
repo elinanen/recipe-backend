@@ -11,8 +11,6 @@ router.post('/', async (req, res, next) => {
       instructions,
       ingredients,
       shared,
-      optional,
-      additionalInfo,
       userId,
     });
     res.status(200).json(recipe);

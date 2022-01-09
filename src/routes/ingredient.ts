@@ -4,13 +4,15 @@ const router = express.Router();
 
 router.post('/', async (req, res, next) => {
   try {
-    const { name, category, measure, selectedUnit, units } = req.body;
+    const { name, category, measure, selectedUnit, units, optional, additionalInfo } = req.body;
     const ingredient = await Ingredient.create({
       name,
       category,
       measure,
       selectedUnit,
       units,
+      optional,
+      additionalInfo,
     });
     res.status(200).json(ingredient);
   } catch (e) {
