@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.post('/', async (req, res, next) => {
   try {
-    const { name, image, instructions, ingredients, shared, optional, additionalInfo, userId } = req.body;
+    const { name, image, instructions, ingredients, shared, userId } = req.body;
     const recipe = await Recipe.create({
       name,
       image,
